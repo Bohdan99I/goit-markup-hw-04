@@ -11,19 +11,28 @@
   --title-text-color: #000000;
   --white-text-color: #ffffff;
   --background-accent-color: #2f303a;
+  --icon-color: #afb1b8;
+  --hero-background: #c4c4c4;
   --team-background-color: #f5f4fa;
   --button-active-bg: #188ce8;
   --header-border: #ececec;
   --footer-email-tel-color: rgba(255, 255, 255, 0.6);
 }
+
 /* ------------BODY----------------- */
 body {
+  display: block;
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
   font-size: 14px;
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   background-color: var(--primary-white-color);
 }
+
 /* Стили для обнуления верхних отступов у элементов */
 h1,
 h2,
@@ -82,6 +91,7 @@ img {
 .section {
   padding: 94px 0;
 }
+
 /* Стилізація шапки (навігація по сайту+контакти) */
 .header-container {
   display: flex;
@@ -130,7 +140,6 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-
 .header-contacts {
   display: flex;
   margin-left: auto;
@@ -141,13 +150,27 @@ img {
   margin-right: 50px;
 }
 .header-contact {
-  color: var(--secondary-text-color);
+  display: flex;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+  text-decoration: none;
+  color: var(--secondary-text-color);
   letter-spacing: 0.02em;
+  align-items: center;
 }
-
+.icon {
+  fill: currentColor;
+  /* fill:#757575; */
+  margin-right: 10px;
+  padding: 0;
+  margin-bottom: 0;
+  /* align-items: center; */
+}
+.icon:hover,
+.icon:focus {
+  fill: var(--accent-color);
+}
 .current,
 .site-link :hover,
 .site-link :focus,
@@ -162,7 +185,17 @@ img {
 
 /* Стилізація героя */
 .hero {
-  background-color: var(--background-accent-color);
+  max-width: 1600px;
+  height: 600px;
+  background-color: var(--hero-background);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero.jpg");
+  background-repeat: no-repeat;
+
   text-align: center;
   display: block;
 
@@ -204,14 +237,13 @@ img {
 .hero-button:focus {
   background-color: var(--button-active-bg);
 }
-/* Особливості */
 
+/* Особливості */
 .section-features {
   padding-bottom: 0;
 }
 .benefits-list {
   display: flex;
-  text-align: left;
 }
 .benefits-list > li {
   flex-basis: calc((100% - 3 * 30px) / 4);
@@ -219,16 +251,31 @@ img {
 .benefits-list > li:not(:last-child) {
   margin-right: 30px;
 }
+.benefits-item {
+  width: 270px;
+  padding: 0;
+}
+.benefits-icons {
+  display: flex;
+  background-color: var(--team-background-color);
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+}
+.icon-benefits {
+  display: block;
+  margin: auto;
+  width: 70px;
+  height: 70px;
+}
 .benefits-title {
-  display: inline-block;
-
+  margin-top: 0;
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-right: 30px;
-  margin-bottom: 10px;
 }
 .benefits-subtitle {
   font-size: 14px;
@@ -238,7 +285,7 @@ img {
 }
 
 /* Чим ми займаємось */
-.our-work {
+.section-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -258,14 +305,6 @@ img {
 .team-section {
   background-color: var(--team-background-color);
 }
-.our-team {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-bottom: 50px;
-}
 .team-list {
   display: flex;
 }
@@ -275,7 +314,6 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-
 .team-link:not(:last-child) {
   margin-right: 30px;
 }
@@ -297,6 +335,29 @@ img {
   color: var(--secondary-text-color);
   margin-bottom: 0;
 }
+
+/* Постійні клієнти */
+.link-client {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  color: var(--icon-color);
+  border: 1px solid;
+  border-radius: 4px;
+}
+.client-item:not(:last-child) {
+  margin-right: 30px;
+}
+.link-client:hover,
+.link-client:focus {
+  color: var(--accent-color);
+}
+.icon-client {
+  fill: currentColor;
+}
+
 /* Підвал */
 .footer {
   background-color: var(--background-accent-color);
