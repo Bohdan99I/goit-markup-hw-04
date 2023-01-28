@@ -163,8 +163,6 @@ img {
   fill: currentColor;
   /* fill:#757575; */
   margin-right: 10px;
-  padding: 0;
-  margin-bottom: 0;
   /* align-items: center; */
 }
 .icon:hover,
@@ -186,7 +184,6 @@ img {
 /* Стилізація героя */
 .hero {
   max-width: 1600px;
-  height: 600px;
   background-color: var(--hero-background);
   background-image: linear-gradient(
       to right,
@@ -195,14 +192,8 @@ img {
     ),
     url("../images/hero.jpg");
   background-repeat: no-repeat;
-
   text-align: center;
-  display: block;
-
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding: 200px 0;
 }
 .hero-title {
   max-width: 696px;
@@ -215,21 +206,16 @@ img {
   letter-spacing: 0.06em;
 }
 .hero-button {
-  display: inline-block;
-  min-width: 200px;
-  border-radius: 4px;
-  border: 1px solid transparent;
   padding: 10px 32px;
+  border-radius: 4px;
+  border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  align-items: center;
   letter-spacing: 0.06em;
   font-family: inherit;
-
+  cursor: pointer;
   background-color: var(--accent-color);
   color: var(--white-text-color);
 }
@@ -257,14 +243,14 @@ img {
 }
 .benefits-icons {
   display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--team-background-color);
   width: 270px;
   height: 120px;
   margin-bottom: 30px;
 }
 .icon-benefits {
-  display: block;
-  margin: auto;
   width: 70px;
   height: 70px;
 }
@@ -366,7 +352,6 @@ img {
 .icon-team {
   width: 20px;
   height: 20px;
-  align-items: center;
   fill: currentColor;
 }
 
@@ -402,6 +387,7 @@ img {
 /* Підвал */
 .flex-container {
   display: flex;
+  align-items: baseline;
 }
 .footer {
   background-color: var(--background-accent-color);
@@ -485,12 +471,6 @@ img {
   color: var(--white-text-color);
 }
 
-.icon-team {
-  width: 20px;
-  height: 20px;
-  align-items: center;
-  fill: currentColor;
-}
 /* ----------------Портфоліо--------------------- */
 .filter {
   display: flex;
@@ -555,6 +535,11 @@ img {
 }
 .project-link {
   text-decoration: none;
+}
+.portfolio-card:hover,
+.portfolio-card:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .project-border {
   padding: 20px 24px;
